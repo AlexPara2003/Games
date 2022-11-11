@@ -28,13 +28,28 @@ sprite_index = sprite[facing];
 if(shift_key) move_speed = 2;
 else move_speed = 1;
 
-//collisions
-if (place_meeting(x + x_speed, y, obj_wall_test))
-{
+mask_index = sprite[DOWN];
+
+////collisions
+//if (place_meeting(x + x_speed, y, obj_wall_test))
+//{
+//	x_speed = 0;
+//}
+//if (place_meeting(x, y + y_speed, obj_wall_test))
+//{
+//	y_speed = 0;
+//}
+//tileset collision
+if (tile_meeting(x + x_speed, y, "Wall")){
+	while (!tile_meeting(x + sign(x_speed), y, "Wall")){
+		x += sign(x_speed);
+	}
 	x_speed = 0;
 }
-if (place_meeting(x, y + y_speed, obj_wall_test))
-{
+if (tile_meeting(x, y + y_speed, "Wall")){
+	while (!tile_meeting(x, y + sign(y_speed), "Wall")){
+		y += sign(y_speed);
+	}
 	y_speed = 0;
 }
 
@@ -52,3 +67,5 @@ else
 //moves player
 x += x_speed;
 y += y_speed;
+
+depth = -bbox_bottom;
