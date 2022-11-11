@@ -1,4 +1,10 @@
-/// @description Insert description here
-// You can write your code in this editor
+// all variables we want to save (i.e. health items etc.)
+global.coins = 0;
 
+// room save data
+global.levelData =
+{
+	// level = room
+	level_1 : 0
+}
 
