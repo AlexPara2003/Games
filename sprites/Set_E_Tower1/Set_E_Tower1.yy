@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Tile Set Sprites",
+    "path": "folders/Sprites/Tile Set Sprites.yy",
   },
 }

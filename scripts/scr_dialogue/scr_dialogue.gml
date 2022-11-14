@@ -10,6 +10,11 @@ function scr_game_text(_text_id)
 				scr_text_shake(0,9);
 			break;
 		}
+		case "sign":
+		{
+			scr_text("I'M THE REAL SIGN!!!");
+			break;
+		}
 		default:
 		{
 			scr_text("There is nothing of note here...");

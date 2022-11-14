@@ -26,6 +26,6 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Objects",
-    "path": "folders/Dialogue System/Objects.yy",
+    "path": "folders/Objects.yy",
   },
 }
