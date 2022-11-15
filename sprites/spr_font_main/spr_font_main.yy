@@ -254,7 +254,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Dialogue System/Sprites.yy",
+    "name": "Fonts",
+    "path": "folders/Fonts.yy",
   },
 }

@@ -5,6 +5,13 @@ right_key = keyboard_check(vk_right);
 interact_key = keyboard_check(ord("Z"));
 
 sprint_key = keyboard_check(vk_shift);
+menu_key = keyboard_check_pressed(vk_escape);
+
+//open menu
+if(menu_key && !instance_exists(obj_pauser)) 
+{
+	instance_create_layer(x - 75, y - 50, "Instances", obj_pauseMenu);
+}
 
 //interact lots and lots of gross code
 //to spawn the interact box (of doom)
