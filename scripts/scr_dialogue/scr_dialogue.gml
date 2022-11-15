@@ -15,6 +15,11 @@ function scr_game_text(_text_id)
 			scr_text("I'M THE REAL SIGN!!!");
 			break;
 		}
+		case "sign - construction":
+		{
+			scr_text("-Under construction-");
+			break;
+		}
 		default:
 		{
 			scr_text("There is nothing of note here...");

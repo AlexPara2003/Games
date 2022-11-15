@@ -42,6 +42,7 @@
     {"id":{"name":"ts_tower","path":"tilesets/ts_tower/ts_tower.yy",},"order":0,},
     {"id":{"name":"spr_textbox_arrow","path":"sprites/spr_textbox_arrow/spr_textbox_arrow.yy",},"order":1,},
     {"id":{"name":"Set_B_Exteriors","path":"sprites/Set_B_Exteriors/Set_B_Exteriors.yy",},"order":2,},
+    {"id":{"name":"rm_outside_west","path":"rooms/rm_outside_west/rm_outside_west.yy",},"order":2,},
     {"id":{"name":"spr_staves","path":"sprites/spr_staves/spr_staves.yy",},"order":1,},
     {"id":{"name":"spr_orc_left","path":"sprites/spr_orc_left/spr_orc_left.yy",},"order":1,},
     {"id":{"name":"Orc_Female_47","path":"sprites/Orc_Female_47/Orc_Female_47.yy",},"order":4,},
@@ -71,6 +72,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"roomId":{"name":"rm_outside","path":"rooms/rm_outside/rm_outside.yy",},},
+    {"roomId":{"name":"rm_outside_west","path":"rooms/rm_outside_west/rm_outside_west.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},
