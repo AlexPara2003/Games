@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "save_functions",
+  "name": "scr_dialogue",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
     "name": "Scripts",
-    "path": "folders/SaveSystem/Scripts.yy",
+    "path": "folders/Dialogue System/Scripts.yy",
   },
 }
