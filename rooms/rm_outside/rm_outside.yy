@@ -16,8 +16,11 @@
     {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
   ],
   "layers": [
+    {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"temp","tilesetId":{"name":"ts_tower","path":"tilesets/ts_tower/ts_tower.yy",},"x":0,"y":0,"tiles":{"TileDataFormat":1,"SerialiseWidth":25,"SerialiseHeight":19,"TileCompressedData":[
+-5,-2147483648,1,200,-24,-2147483648,1,216,-444,-2147483648,],},"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_112587EF","properties":[],"isDnd":false,"objectId":{"name":"obj_interactable","path":"objects/obj_interactable/obj_interactable.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":144.0,"y":96.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5C13BBC","properties":[],"isDnd":false,"objectId":{"name":"obj_room_swapper","path":"objects/obj_room_swapper/obj_room_swapper.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":80.0,"y":16.0,},
       ],"visible":true,"depth":1000,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Wall2","tilesetId":{"name":"ts_exterior","path":"tilesets/ts_exterior/ts_exterior.yy",},"x":0,"y":0,"tiles":{"TileDataFormat":1,"SerialiseWidth":25,"SerialiseHeight":19,"TileCompressedData":[
 9,82,83,82,83,97,-2147483648,-2147483648,80,81,-4,-2147483648,2,96,97,-5,-2147483648,14,53,-2147483648,-2147483648,96,82,98,99,
@@ -64,6 +67,7 @@
   "inheritCode": false,
   "instanceCreationOrder": [
     {"name":"inst_112587EF","path":"rooms/rm_outside/rm_outside.yy",},
+    {"name":"inst_5C13BBC","path":"rooms/rm_outside/rm_outside.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
