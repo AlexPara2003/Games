@@ -1,10 +1,10 @@
 {
   "resourceType": "GMTileSet",
   "resourceVersion": "1.0",
-  "name": "ts_tower",
+  "name": "ts_rooftops",
   "spriteId": {
-    "name": "Set_E_Tower1",
-    "path": "sprites/Set_E_Tower1/Set_E_Tower1.yy",
+    "name": "Set_F_Rooftops",
+    "path": "sprites/Set_F_Rooftops/Set_F_Rooftops.yy",
   },
   "tileWidth": 16,
   "tileHeight": 16,
