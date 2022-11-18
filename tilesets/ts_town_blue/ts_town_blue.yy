@@ -1,10 +1,10 @@
 {
   "resourceType": "GMTileSet",
   "resourceVersion": "1.0",
-  "name": "ts_tower",
+  "name": "ts_town_blue",
   "spriteId": {
-    "name": "Set_E_Tower1",
-    "path": "sprites/Set_E_Tower1/Set_E_Tower1.yy",
+    "name": "Set_E_Grand_Town2",
+    "path": "sprites/Set_E_Grand_Town2/Set_E_Grand_Town2.yy",
   },
   "tileWidth": 16,
   "tileHeight": 16,

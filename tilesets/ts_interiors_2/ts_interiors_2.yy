@@ -1,10 +1,10 @@
 {
   "resourceType": "GMTileSet",
   "resourceVersion": "1.0",
-  "name": "ts_tower",
+  "name": "ts_interiors_2",
   "spriteId": {
-    "name": "Set_E_Tower1",
-    "path": "sprites/Set_E_Tower1/Set_E_Tower1.yy",
+    "name": "Set_D_Interiors",
+    "path": "sprites/Set_D_Interiors/Set_D_Interiors.yy",
   },
   "tileWidth": 16,
   "tileHeight": 16,
@@ -307,7 +307,7 @@
     "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Structure",
-    "path": "folders/Tile Sets/Buildings/Structure.yy",
+    "name": "Furniture",
+    "path": "folders/Tile Sets/Buildings/Furniture.yy",
   },
 }
