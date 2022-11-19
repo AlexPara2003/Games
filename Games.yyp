@@ -29,7 +29,7 @@
     {"id":{"name":"ts_carpet","path":"tilesets/ts_carpet/ts_carpet.yy",},"order":1,},
     {"id":{"name":"snd_select","path":"sounds/snd_select/snd_select.yy",},"order":0,},
     {"id":{"name":"spr_temp_items","path":"sprites/spr_temp_items/spr_temp_items.yy",},"order":3,},
-    {"id":{"name":"rm_house","path":"rooms/rm_house/rm_house.yy",},"order":3,},
+    {"id":{"name":"rm_house_test","path":"rooms/rm_house_test/rm_house_test.yy",},"order":3,},
     {"id":{"name":"snd_confirm","path":"sounds/snd_confirm/snd_confirm.yy",},"order":1,},
     {"id":{"name":"ts_hills","path":"tilesets/ts_hills/ts_hills.yy",},"order":1,},
     {"id":{"name":"snd_keyboard","path":"sounds/snd_keyboard/snd_keyboard.yy",},"order":0,},
@@ -95,7 +95,7 @@
     {"roomId":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"roomId":{"name":"rm_outside","path":"rooms/rm_outside/rm_outside.yy",},},
     {"roomId":{"name":"rm_outside_west","path":"rooms/rm_outside_west/rm_outside_west.yy",},},
-    {"roomId":{"name":"rm_house","path":"rooms/rm_house/rm_house.yy",},},
+    {"roomId":{"name":"rm_house_test","path":"rooms/rm_house_test/rm_house_test.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},
