@@ -56,6 +56,7 @@
     {"id":{"name":"ts_exterior","path":"tilesets/ts_exterior/ts_exterior.yy",},"order":2,},
     {"id":{"name":"ts_tower","path":"tilesets/ts_tower/ts_tower.yy",},"order":4,},
     {"id":{"name":"ts_interiors_2","path":"tilesets/ts_interiors_2/ts_interiors_2.yy",},"order":3,},
+    {"id":{"name":"spr_items","path":"sprites/spr_items/spr_items.yy",},"order":4,},
     {"id":{"name":"spr_textbox_arrow","path":"sprites/spr_textbox_arrow/spr_textbox_arrow.yy",},"order":1,},
     {"id":{"name":"Set_B_Exteriors","path":"sprites/Set_B_Exteriors/Set_B_Exteriors.yy",},"order":2,},
     {"id":{"name":"rm_outside_west","path":"rooms/rm_outside_west/rm_outside_west.yy",},"order":2,},
@@ -137,6 +138,9 @@
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","isScaled":true,"compressFormat":"bz2","loadType":"default","directory":"","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,},
+    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"female_church_05","isScaled":true,"compressFormat":"bz2","loadType":"default","directory":"","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,},
+    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"world_sprites","isScaled":true,"compressFormat":"bz2","loadType":"default","directory":"","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,},
+    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"dialogue","isScaled":true,"compressFormat":"bz2","loadType":"default","directory":"","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,},
   ],
   "IncludedFiles": [],
   "MetaData": {

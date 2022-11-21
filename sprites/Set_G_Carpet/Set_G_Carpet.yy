@@ -21,8 +21,8 @@
   "width": 256,
   "height": 256,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "world_sprites",
+    "path": "texturegroups/world_sprites",
   },
   "swatchColours": null,
   "gridX": 0,

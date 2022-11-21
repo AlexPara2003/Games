@@ -21,8 +21,8 @@
   "width": 16,
   "height": 20,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "female_church_05",
+    "path": "texturegroups/female_church_05",
   },
   "swatchColours": null,
   "gridX": 0,
