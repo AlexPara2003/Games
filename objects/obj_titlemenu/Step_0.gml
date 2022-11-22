@@ -30,7 +30,7 @@ if (select_key && width >= end_width * .9)
 			{
 				//start game
 				case 0:
-					room_goto(rm_test); break;
+					room_goto(rm_house_test); break;
 				//settings
 				//case 1: menu_level = 1; break;
 				case 1: game_end(); break;
