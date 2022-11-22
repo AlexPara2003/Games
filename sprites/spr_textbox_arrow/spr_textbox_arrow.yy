@@ -21,8 +21,8 @@
   "width": 21,
   "height": 21,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "dialogue",
+    "path": "texturegroups/dialogue",
   },
   "swatchColours": null,
   "gridX": 0,

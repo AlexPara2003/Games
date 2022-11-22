@@ -30,7 +30,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "SaveSystem",
-    "path": "folders/SaveSystem.yy",
+    "name": "Save System",
+    "path": "folders/Save System.yy",
   },
 }
