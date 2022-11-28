@@ -1,3 +1,5 @@
-float_dir = random(10);
-float_int = 0.03;
-show_debug_message(float_dir);
+float_dir = 1;
+float_int = 0.3;
+float_offset = random(10);
+
+image_index = irandom(6);

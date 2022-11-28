@@ -12,7 +12,9 @@ function scr_game_text(_text_id)
 		}
 		case "sign":
 		{
-			scr_text("I'M THE REAL SIGN!!!");
+			scr_text("^ North - Village");
+			scr_text("> East - Castle");
+			scr_text("< West - House");
 			break;
 		}
 		case "sign - construction":

@@ -29,7 +29,7 @@ function save_room()
 	if room == rm_test { global.levelData.level_1 = _roomStruct; };
 	if room == rm_outside {global.levelData.level_2 = _roomStruct; };
 	if room == rm_outside_west {global.levelData.level_3 = _roomStruct; };
-	if room == rm_house_test {global.levelData.level_4 = _roomStruct; };
+	if room == rm_house {global.levelData.level_4 = _roomStruct; };
 }
 
 function load_room()
@@ -39,7 +39,7 @@ function load_room()
 	if room == rm_test { _roomStruct = global.levelData.level_1; };
 	if room == rm_outside { _roomStruct = global.levelData.level_2; };
 	if room == rm_outside_west { _roomStruct = global.levelData.level_3; };
-	if room == rm_house_test { _roomStruct = global.levelData.level_4; };
+	if room == rm_house { _roomStruct = global.levelData.level_4; };
 	
 	// EXIT if _roomStruct = 0
 	if !is_struct(_roomStruct) { exit; };

@@ -75,6 +75,6 @@
   "nineSlice": null,
   "parent": {
     "name": "spr_orc",
-    "path": "folders/Sprites/spr_orc.yy",
+    "path": "folders/Sprites/Characters/spr_orc.yy",
   },
 }

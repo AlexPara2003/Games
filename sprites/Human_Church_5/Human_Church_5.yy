@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "spr_player",
-    "path": "folders/Sprites/spr_player.yy",
+    "path": "folders/Sprites/Characters/spr_player.yy",
   },
 }
