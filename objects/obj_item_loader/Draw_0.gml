@@ -8,7 +8,7 @@ for(var i = 0; i < array_length(inv); i++){
 	var _col = c_white;
 
 	//Icon
-	draw_sprite(inv[i].sprite, 0, _xx, _yy + _sep * i);
+	draw_sprite_ext(inv[i].sprite, inv[i].frameNum, _xx, _yy + _sep * i, 0.5, 0.5, 0, c_white, 1);
 	
 	//Get "selected" color
 	if selected_item == i{ _col = c_yellow;};

@@ -1,35 +1,36 @@
-depth = -9999
+depth = -9999;
 
 global.font = font_add_sprite(spr_font_main, 32, true, 1)
 //Item constructor
-function create_item(_name, _desc, _spr, _effect) constructor
+function create_item(_name, _desc, _spr, _frame, _effect) constructor
 {
 	name = _name;
 	description = _desc;
 	sprite = _spr;
+	frameNum = _frame;
 	effect = _effect
 }
 
 global.item_list = 
 	{
 	//Frame 52
-	wooden_sword : new create_item(
-	"Wooden Sword", 
-	"Very basic sword. It's better than nothing I guess.", 
-	sprite_index = spr_items,
-	function()
+		wooden_sword : new create_item(
+		"Wooden Sword", 
+		"Very basic sword. It's better than nothing I guess.", 
+		spr_items,
+		51,
+		function()
 		{
 			obj_player.attack += 1;
 		}
 	),
-
-		
+	
 	iron_sword : new create_item(
-	"Iron Sword",
-	"Capable of cutting down even the sturdiest of goblins",
-	sprite_index = spr_items, 
-	image_index = 2,
-	function()
+		"Iron Sword",
+		"Capable of cutting down even the sturdiest of goblins",
+		spr_items, 
+		40,
+		function()
 		{
 			obj_player.attack += 5;
 		}
@@ -38,8 +39,8 @@ global.item_list =
 	lesser_health_potion : new create_item(
 		"Lesser Health Potion", 
 		"Used to heal small cuts and bruises", 
-		sprite_index = spr_temp_items,
-		image_index = 3,
+		spr_items,
+		309,
 		function()
 		{
 			obj_player.health += 5;
