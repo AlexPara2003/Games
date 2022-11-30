@@ -10,7 +10,7 @@ menu_key = keyboard_check_pressed(vk_escape);
 //open menu
 if(menu_key && !instance_exists(obj_pauser)) 
 {
-	instance_create_layer(x - 75, y - 50, "Instances", obj_pauseMenu);
+	instance_create_layer(camera_get_view_x(view_camera[0]) + 1, camera_get_view_y(view_camera[0]) + 1, "Instances", obj_pauseMenu);
 }
 
 //interact lots and lots of gross code

@@ -23,6 +23,8 @@ if (pos < 0) {pos = op_length - 1};
 if (x < 0) x = 0;
 if (y < 0) y = 0;
 
+if(menu_level == 2) pos = 5;
+
 //select options only when menu is on screen & (almost) not moving
 if (select_key)
 {
@@ -71,10 +73,7 @@ if (select_key)
 		switch(pos)
 			{
 				//status
-				case 0:
-					//code
-			        break;
-				case 4: menu_level = 0;;
+				case 5: menu_level = 0;
 					break;
 				//return
 				

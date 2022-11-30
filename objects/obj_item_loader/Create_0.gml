@@ -19,7 +19,7 @@ global.item_list =
 		"Wooden Sword", 
 		"Very basic sword. It's better than nothing I guess.", 
 		spr_items,
-		51,
+		52,
 		function()
 		{
 			global.playerAtk = global.playerBaseAtk + 1;
@@ -31,7 +31,7 @@ global.item_list =
 		"Iron Sword",
 		"Capable of cutting down even the sturdiest of goblins",
 		spr_items, 
-		40,
+		41,
 		function()
 		{
 			global.playerAtk = global.playerBaseAtk + 5;
@@ -39,11 +39,23 @@ global.item_list =
 		"weapon"
 	),
 	
+	iron_armor : new create_item(
+		"Iron Armor",
+		"Capabale of protecting you from some damage, sometimes spelt with a 'u'.",
+		spr_items, 
+		30,
+		function()
+		{
+			global.playerDef = global.playerBaseDef + 5;
+		},
+		"armor"
+	),
+	
 	lesser_health_potion : new create_item(
 		"Lesser Health Potion", 
 		"Used to heal small cuts and bruises", 
 		spr_items,
-		309,
+		310,
 		function()
 		{
 			global.playerHP += 5;
