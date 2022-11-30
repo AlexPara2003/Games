@@ -5,7 +5,7 @@ width = 100;
 height = 75;
 
 op_border = 10;
-op_space = 25;
+op_space = 10;
 
 pos = 0;
 
@@ -14,14 +14,23 @@ option[0, 1] = "Status";
 option[0, 2] = "Return";
 option[0, 3] = "Close Game";
 
-option[1, 0] = "Apple";
-option[1, 1] = "Potion";
-option[1, 2] = "Return";
+items = 0;
+for(var i = 0; i < array_length(obj_item_loader.inv); i++)
+{
+	option[1, i] = obj_item_loader.inv[i].name;
+	items++;
+}
 
-option[2, 0] = "Fine";
-option[2, 1] = "Return";
+option[1, items] = "Return";
+
+option[2, 0] = "HP: " + string(global.playerHP) + "/" + string(global.playerMaxHP);
+option[2, 1] = "ATK: " + string(global.playerAtk);
+option[2, 2] = "DEF: " + string(global.playerDef);
+option[2, 3] = "LVL: " + string(global.playerLvl);
+option[2, 4] = "Return";
 
 op_length = 0;
 menu_level = 0;
 
 depth = -99999;
+

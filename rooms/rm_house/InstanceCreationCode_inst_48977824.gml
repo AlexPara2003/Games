@@ -1,0 +1,1 @@
+item = global.item_list.lesser_health_potion;

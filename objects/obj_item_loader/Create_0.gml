@@ -2,13 +2,14 @@ depth = -9999;
 
 global.font = font_add_sprite(spr_font_main, 32, true, 1)
 //Item constructor
-function create_item(_name, _desc, _spr, _frame, _effect) constructor
+function create_item(_name, _desc, _spr, _frame, _effect, _type) constructor
 {
 	name = _name;
 	description = _desc;
 	sprite = _spr;
 	frameNum = _frame;
 	effect = _effect
+	itemType = _type;
 }
 
 global.item_list = 
@@ -21,8 +22,9 @@ global.item_list =
 		51,
 		function()
 		{
-			obj_player.attack += 1;
-		}
+			global.playerAtk = global.playerBaseAtk + 1;
+		},
+		"weapon"
 	),
 	
 	iron_sword : new create_item(
@@ -32,8 +34,9 @@ global.item_list =
 		40,
 		function()
 		{
-			obj_player.attack += 5;
-		}
+			global.playerAtk = global.playerBaseAtk + 5;
+		},
+		"weapon"
 	),
 	
 	lesser_health_potion : new create_item(
@@ -43,10 +46,23 @@ global.item_list =
 		309,
 		function()
 		{
-			obj_player.health += 5;
-			
-			array_delete(inv, selected_item, 1);
-		}
+			global.playerHP += 5;
+			if (global.playerHP > global.playerMaxHP) global.playerHP = global.playerMaxHP;
+			//array_delete(inv, selected_item, 1);
+		},
+		"consumable"
+	),
+	
+	nothing : new create_item(
+		"Nothing", 
+		"It's empty. Like my soul.", 
+		spr_items,
+		0,
+		function()
+		{
+			//nothing happens. you're disapointed.
+		},
+		"nothing"
 	)
 }
 
@@ -58,3 +74,6 @@ selected_item = -1;
 //For drawing and mouse positions
 sep = 16;
 screen_bord = 16;
+
+global.playerWeapon = global.item_list.nothing;
+global.playerArmor = global.item_list.nothing;

@@ -20,7 +20,6 @@ if (up_key || down_key) audio_play_sound(snd_select, 100, false);
 if (pos >= op_length) {pos = 0};
 if (pos < 0) {pos = op_length - 1};
 
-
 if (x < 0) x = 0;
 if (y < 0) y = 0;
 
@@ -52,31 +51,30 @@ if (select_key)
 			}
 		break;
 		case 1:
+		
 		switch(pos)
 			{
-				//items
-				case 0:
-					//code
-			        break;
-				//status
-				case 1: 
-					//code
-					break;
 				//return
-				case 2: 
+				case items: 
 					menu_level = 0;
 					break;
+				default:
+				{
+					var _item = obj_item_loader.inv[pos];
+					item_use(_item, _item.itemType);
+					array_delete(obj_item_loader.inv, pos, 1);
+					instance_destroy();
+				}
 			}
 		break;
 		case 2:
 		switch(pos)
 			{
-				//items
+				//status
 				case 0:
 					//code
 			        break;
-				//status
-				case 1: menu_level = 0;;
+				case 4: menu_level = 0;;
 					break;
 				//return
 				
