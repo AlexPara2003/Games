@@ -36,30 +36,6 @@ if (select_key && width >= end_width * .9)
 				case 1: game_end(); break;
 			}
 		break;
-		
-		//settings
-		case 1:
-			switch(pos)
-			{
-				//WIP - probably won't add...
-				case 0:
-				
-					break;
-				//window size
-				case 1:
-				
-					break;
-				//brightness
-				case 2:
-					break;
-				//controls
-				case 3:
-					break;
-					//back
-				case 4:
-					menu_level = 0; 
-					break;
-			}
 	}
 	
 	//sets the menu pos back to 0

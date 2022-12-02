@@ -1,4 +1,5 @@
 global.font_main = font_add_sprite(spr_font_main, 32, true, 1);
+global.font_main2 = font_add_sprite(spr_font_main2, 32, true, 2);
 //global.font_title = font_add_sprite(spr_font_title, 32, true, 1);
 
 
