@@ -1,0 +1,1 @@
+if(obj_battle.currentEnemy.enemyHP <= 0) instance_destroy();

@@ -30,7 +30,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Battle System",
-    "path": "folders/Battle System.yy",
+    "name": "Objects",
+    "path": "folders/Battle System/Objects.yy",
   },
 }

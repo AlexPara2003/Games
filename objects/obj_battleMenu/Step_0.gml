@@ -37,18 +37,39 @@ if (select_key)
 			{
 				//attack
 				case 0:
-					menu_level = 1;
+					//menu_level = 1;
+					layer_sequence_create("Sequence", obj_player_battle.x, obj_player_battle.y, seq_attack);
+					obj_battle.battleState = battleStates.player_action;
+					obj_battle.enemyCurrentHP -= (global.playerAtk - obj_battle.enemyTempDef);
+					instance_destroy();
 			        break;
 				//spells
 				case 1: 
 					//menu_level = 2;
+					
+					//not implimented yet
 					break;
 				//items
 				case 2:
 					menu_level = 3;
 					break;
 				case 3:
-					game_end();
+					var _flee = irandom(100);
+					if (_flee > 70) 
+					{
+						if(!layer_sequence_exists("Sequence", seq_room_in)) 
+						{
+							layer_sequence_create("Sequence", obj_player_battle.x, obj_player_battle.y, seq_room_in);
+							obj_battle.battleState = battleStates.player_action;
+						}
+					}
+					else 
+					{
+						show_debug_message("flee failed");
+						show_debug_message(_flee);
+						obj_battle.battleState = battleStates.enemy_turn;
+					}
+					instance_destroy();
 					break;
 			}
 		break;
@@ -64,6 +85,7 @@ if (select_key)
 					var _item = obj_item_loader.inv[pos];
 					item_use(_item, _item.itemType);
 					array_delete(obj_item_loader.inv, pos, 1);
+					obj_battle.battleState = battleStates.enemy_turn;
 					instance_destroy();
 				}
 			}

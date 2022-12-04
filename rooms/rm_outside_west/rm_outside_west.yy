@@ -37,6 +37,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_237C173A","properties":[],"isDnd":false,"objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":10.4375,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":159.0,"y":315.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5C7EE313","properties":[],"isDnd":false,"objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":15.562501,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":397.0,"y":274.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4E3CD8E8","properties":[],"isDnd":false,"objectId":{"name":"obj_smoke_emitter","path":"objects/obj_smoke_emitter/obj_smoke_emitter.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":166.0,"y":55.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6A5A4D4","properties":[],"isDnd":false,"objectId":{"name":"obj_room_swapper","path":"objects/obj_room_swapper/obj_room_swapper.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0625,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":96.0,"y":128.0,},
       ],"visible":true,"depth":1000,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"House_1","tilesetId":{"name":"ts_town_red","path":"tilesets/ts_town_red/ts_town_red.yy",},"x":0,"y":0,"tiles":{"TileDataFormat":1,"SerialiseWidth":25,"SerialiseHeight":19,"TileCompressedData":[
 -36,-2147483648,1,0,-22,-2147483648,-5,0,-21,-2147483648,6,51,37,32,33,33,34,-19,-2147483648,6,51,37,0,49,49,
@@ -104,6 +105,7 @@
     {"name":"inst_237C173A","path":"rooms/rm_outside_west/rm_outside_west.yy",},
     {"name":"inst_5C7EE313","path":"rooms/rm_outside_west/rm_outside_west.yy",},
     {"name":"inst_4E3CD8E8","path":"rooms/rm_outside_west/rm_outside_west.yy",},
+    {"name":"inst_6A5A4D4","path":"rooms/rm_outside_west/rm_outside_west.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

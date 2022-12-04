@@ -12,3 +12,6 @@ global.playerBaseAtk = 5;
 global.playerDef = 1;
 global.playerBaseDef = 1;
 global.playerLvl = 1;
+
+
+global.lastRoomVisited = rm_start_screen;

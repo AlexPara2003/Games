@@ -10,7 +10,7 @@
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
-  "persistent": true,
+  "persistent": false,
   "parentObjectId": {
     "name": "obj_pauser",
     "path": "objects/obj_pauser/obj_pauser.yy",
@@ -36,7 +36,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Battle System",
-    "path": "folders/Battle System.yy",
+    "name": "Objects",
+    "path": "folders/Battle System/Objects.yy",
   },
 }

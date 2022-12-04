@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_enemy_battle",
-  "spriteId": null,
+  "spriteId": {
+    "name": "Slime_1",
+    "path": "sprites/Slime_1/Slime_1.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -21,11 +24,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":76,"eventType":7,"collisionObjectId":null,},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Battle System",
-    "path": "folders/Battle System.yy",
+    "name": "Objects",
+    "path": "folders/Battle System/Objects.yy",
   },
 }
