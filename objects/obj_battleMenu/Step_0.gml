@@ -85,7 +85,11 @@ if (select_key)
 					var _item = obj_item_loader.inv[pos];
 					item_use(_item, _item.itemType);
 					array_delete(obj_item_loader.inv, pos, 1);
-					obj_battle.battleState = battleStates.enemy_turn;
+					if (_item.itemType != "consumable")
+					{
+						obj_battle.battleState = battleStates.enemy_turn;
+					}
+					else obj_battle.battleState = battleStates.player_action;
 					instance_destroy();
 				}
 			}

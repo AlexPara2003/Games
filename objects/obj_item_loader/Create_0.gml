@@ -60,6 +60,7 @@ global.item_list =
 		{
 			global.playerHP += 5;
 			if (global.playerHP > global.playerMaxHP) global.playerHP = global.playerMaxHP;
+			if (instance_exists(obj_battle)) layer_sequence_create("Sequence", obj_player_battle.x, obj_player_battle.y, seq_heal);
 			//array_delete(inv, selected_item, 1);
 		},
 		"consumable"
