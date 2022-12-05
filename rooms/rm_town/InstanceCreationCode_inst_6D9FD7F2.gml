@@ -1,0 +1,1 @@
+text_id = "yellow_mushroom";

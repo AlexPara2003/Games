@@ -9,9 +9,10 @@ op_space = 25;
 
 pos = 0;
 
-option[0, 0] = "Start Game";
+option[0, 0] = "New Game";
+option[0, 1] = "Load Game";
 //option[0, 1] = "Settings";
-option[0, 1] = "Quit Game";
+option[0, 2] = "Quit Game";
 
 option[1, 0] = "WIP";
 option[1, 1] = "Window Size";

@@ -1,10 +1,19 @@
 enemyDispHP = lerp(enemyDispHP, enemyTempHP, .1);
 playerDisHP = lerp(playerDisHP, playerTempHP, .1);
 
+if (turnTimer <= 0)
+{
+	//turnTimer = dt * 500;
+	//battleState++;
+	//playerIdle = true;
+}
+else turnTimer -= dt;
+
 switch(battleState)
 {
 	case battleStates.battle_start:
 	{
+		turnTimer = dt * 500;
 		if (instance_exists(obj_enemy_battle))
 		{
 			obj_enemy_battle.sprite_index = currentEnemy.enemySprite;
@@ -20,6 +29,7 @@ switch(battleState)
 		{
 			if(!instance_exists(obj_battleMenu))
 			{
+				turnTimer = dt * 500;
 				show_debug_message("Player Turn");
 				instance_create_layer(camera_get_view_x(view_camera[0]) + 1, camera_get_view_y(view_camera[0]) + 1, "Instances", obj_battleMenu);
 				//battleState = battleStates.player_action;
@@ -32,9 +42,9 @@ switch(battleState)
 	case battleStates.player_action:
 	{
 		if (instance_exists(obj_battleMenu)) instance_destroy(obj_battleMenu);
-		show_debug_message("Player Action");
+		//show_debug_message("Player Action");
 		//battleState = battleStates.enemy_turn;
-		show_debug_message("Enemy Turn");
+		//show_debug_message("Enemy Turn");
 		break;
 	}
 	case battleStates.enemy_turn:
@@ -49,12 +59,13 @@ switch(battleState)
 				enemyChoice = "attack";
 				global.playerHP -= (currentEnemy.enemyAtk - global.playerDef);
 			}
-			if (enemyAction >= 5 && enemyAction < 40) 
+			else if (enemyAction >= 5 && enemyAction < 40) 
 			{
 				enemyChoice = "defend";
 				enemyTempDef *= 2;
 			}
-			//else //battle end
+			else enemyChoice = "flee";
+			
 			battleState = battleStates.enemy_action;
 			show_debug_message("Enemy Action");
 		}
@@ -69,7 +80,20 @@ switch(battleState)
 		{
 			case "attack":
 			{
-				layer_sequence_create("Sequence", obj_player_battle.x, obj_player_battle.y, seq_enemy_arrow);
+				switch (currentEnemy.enemyType)
+				{
+					case "melee":
+					{
+						layer_sequence_create("Sequence", obj_player_battle.x, obj_player_battle.y, seq_enemy_generic);
+						break;
+					}
+					case "ranged":
+					{
+						layer_sequence_create("Sequence", obj_player_battle.x, obj_player_battle.y, seq_enemy_arrow);
+						break;
+					}
+				}
+				
 				enemyChoice = "nothing";
 				break;
 			}

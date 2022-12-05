@@ -2,26 +2,28 @@
 function save_room()
 {
 	// getting all savable objects in a room
-	var _coinNum = instance_number(obj_coin);
+	var _itemNum = instance_number(obj_overworld);
 	
 	var _roomStruct =
 	{
-		coinNum : _coinNum,
-		coinData : array_create(_coinNum),
+		itemNum : _itemNum,
+		itemData : array_create(_itemNum),
 		
 	}
 	
 	// Get the data from all savable objects
 	
-	// Coins
-	for (var i = 0; i < _coinNum; i++)
+	// Items
+	for(var i = 0; i < _itemNum; i++)
 	{
-		var _inst = instance_find(obj_coin, i);
+		var _inst = instance_find(obj_overworld, i);
 		
-		_roomStruct.coinData[i] =
+		_roomStruct.itemData[i] = 
 		{
 			x : _inst.x,
-			y : _inst.y
+			y : _inst.y,
+			sImage : _inst.image_index,
+			sItem : _inst.item
 		}
 	}
 	
@@ -30,6 +32,8 @@ function save_room()
 	if room == rm_outside {global.levelData.level_2 = _roomStruct; };
 	if room == rm_outside_west {global.levelData.level_3 = _roomStruct; };
 	if room == rm_house {global.levelData.level_4 = _roomStruct; };
+	if room == rm_glitch {global.levelData.level_5 = _roomStruct; };
+	if room == rm_town {global.levelData.level_6 = _roomStruct; };
 }
 
 function load_room()
@@ -40,16 +44,21 @@ function load_room()
 	if room == rm_outside { _roomStruct = global.levelData.level_2; };
 	if room == rm_outside_west { _roomStruct = global.levelData.level_3; };
 	if room == rm_house { _roomStruct = global.levelData.level_4; };
+	if room == rm_glitch { _roomStruct = global.levelData.level_5; };
+	if room == rm_town { _roomStruct = global.levelData.level_6; };
 	
 	// EXIT if _roomStruct = 0
 	if !is_struct(_roomStruct) { exit; };
 	
-	// Coins
-	if instance_exists(obj_coin) { instance_destroy(obj_coin); };
-	
-	for (var i = 0; i < _roomStruct.coinNum; i++)
+	// Items
+	if instance_exists(obj_overworld) { instance_destroy(obj_overworld); };
+	for(var i = 0; i < _roomStruct.itemNum; i++) 
 	{
-		instance_create_depth(_roomStruct.coinData[i].x, _roomStruct.coinData[i].y, depth, obj_coin);
+		with( instance_create_layer(_roomStruct.itemData[i].x,_roomStruct.itemData[i].y, layer, obj_overworld) )
+		{
+			image_index = _roomStruct.itemData[i].sImage;
+			item = _roomStruct.itemData[i].sItem;
+		}
 	}
 }
 
@@ -66,7 +75,23 @@ function save_game(_fileNum = 0)
 	global.statData.save_y = obj_player.y;
 	global.statData.save_rm = room_get_name(room);
 	
-	global.statData.coins = global.coins;
+	// Player Stat
+	global.statData.playerMaxHP = global.playerMaxHP;
+	global.statData.playerHP = global.playerHP;
+	global.statData.playerMaxMP = global.playerMaxMP;
+	global.statData.playerMP = global.playerMP;
+	global.statData.playerAtk = global.playerAtk;
+	global.statData.playerBaseAtk = global.playerBaseAtk;
+	global.statData.playerDef = global.playerDef;
+	global.statData.playerBaseDef = global.playerBaseDef;
+	global.statData.playerLvl = global.playerLvl;
+	
+	global.statData.playerWeapon = global.playerWeapon;
+	global.statData.playerArmor = global.playerArmor;
+	
+	global.statData.itemList = global.item_list;
+	
+	global.statData.item_inv = obj_item_loader.inv;
 	
 	array_push(_saveArray, global.statData);
 	
@@ -102,7 +127,39 @@ function load_game(_fileNum = 0)
 	global.statData = array_get(_loadArray, 0);
 	global.levelData = array_get(_loadArray, 1);
 	
-	global.coins = global.statData.coins;
+	if(instance_exists(obj_settings)) 
+	{
+		instance_destroy(obj_settings);
+		instance_create_depth(0, 0, 0, obj_settings);
+	}
+	else instance_create_depth(0, 0, 0, obj_settings);
+	if(instance_exists(obj_item_loader)) 
+	{
+		instance_destroy(obj_item_loader);
+		instance_create_depth(0, 0, 0, obj_item_loader);
+	}
+	else instance_create_depth(0, 0, 0, obj_item_loader);
+	
+	// Player Stat
+	global.playerMaxHP = global.statData.playerMaxHP;
+	global.playerHP = global.statData.playerHP;
+	global.playerMaxMP = global.statData.playerMaxMP;
+	global.playerMP = global.statData.playerMP;
+	global.playerAtk = global.statData.playerAtk;
+	global.playerBaseAtk = global.statData.playerBaseAtk;
+	global.playerDef = global.statData.playerDef;
+	global.playerBaseDef = global.statData.playerBaseDef;
+	global.playerLvl = global.statData.playerLvl;
+	
+	global.playerWeapon = global.statData.playerWeapon;
+	global.playerArmor = global.statData.playerArmor;
+	
+	global.item_list = global.statData.itemList;
+	
+	// Items
+	obj_item_loader.inv = global.statData.item_inv;
+	
+	//for(int i = 0; i < item_inv.
 	
 	// placing player in correct spot
 	var _loadRoom = asset_get_index(global.statData.save_rm);

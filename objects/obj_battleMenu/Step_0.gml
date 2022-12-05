@@ -41,6 +41,7 @@ if (select_key)
 					layer_sequence_create("Sequence", obj_player_battle.x, obj_player_battle.y, seq_attack);
 					obj_battle.battleState = battleStates.player_action;
 					obj_battle.enemyCurrentHP -= (global.playerAtk - obj_battle.enemyTempDef);
+					obj_battle.playerIdle = false;
 					instance_destroy();
 			        break;
 				//spells
@@ -59,6 +60,7 @@ if (select_key)
 					{
 						if(!layer_sequence_exists("Sequence", seq_room_in)) 
 						{
+							obj_battle.playerIdle = false;
 							layer_sequence_create("Sequence", obj_player_battle.x, obj_player_battle.y, seq_room_in);
 							obj_battle.battleState = battleStates.player_action;
 						}
@@ -66,6 +68,7 @@ if (select_key)
 					else 
 					{
 						show_debug_message("flee failed");
+						obj_battle.playerIdle = false;
 						show_debug_message(_flee);
 						obj_battle.battleState = battleStates.enemy_turn;
 					}
@@ -82,6 +85,7 @@ if (select_key)
 					break;
 				default:
 				{
+					obj_battle.playerIdle = false;
 					var _item = obj_item_loader.inv[pos];
 					item_use(_item, _item.itemType);
 					array_delete(obj_item_loader.inv, pos, 1);

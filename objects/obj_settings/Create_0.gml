@@ -15,3 +15,4 @@ global.playerLvl = 1;
 
 
 global.lastRoomVisited = rm_start_screen;
+global.battleEnemy = "Skeleton";

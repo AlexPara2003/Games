@@ -1,0 +1,12 @@
+James:
+	Finished Battle System
+	Enemy Spawning
+	Player now gets put back into correct room after battle.
+
+Alex:
+	NPC Dialogue
+	Flavor / Interaction Text	
+
+Leo:
+	Integrated save system into menu system 
+	(was linked to keyboard buttons before)

@@ -1,11 +1,34 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function item_add(_item){
 	array_push(obj_item_loader.inv, _item);
 }
 
 function item_use(_item, _type){
-	_item.effect();
+	//show_debug_message(_item.name);
+	switch(_item.name)
+	{
+		case "Wooden Sword":
+		{
+			global.playerAtk = global.playerBaseAtk + 1;
+			break;
+		}
+		case "Iron Sword":
+		{
+			global.playerAtk = global.playerBaseAtk + 5;
+			break;
+		}
+		case "Iron Armor":
+		{
+			global.playerDef = global.playerBaseDef + 5;
+			break;
+		}
+		case "Lesser Health Potion":
+		{
+			global.playerHP += 5;
+			if (global.playerHP > global.playerMaxHP) global.playerHP = global.playerMaxHP;
+			if (instance_exists(obj_battle)) layer_sequence_create("Sequence", obj_player_battle.x, obj_player_battle.y, seq_heal);
+			break;
+		}
+	}
 	switch(_type){
 		case "weapon":
 		{

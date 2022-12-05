@@ -43,11 +43,21 @@ if (select_key)
 				case 1: 
 					menu_level = 2;
 					break;
-				//return
-				case 2:
+				//save
+				case 2: 
+					save_game(0);
 					alarm[0] = 10;
 					break;
-				case 3:
+				//load
+				case 3: 
+					load_game(0);
+					alarm[0] = 10;
+					break;
+				//return
+				case 4:
+					alarm[0] = 10;
+					break;
+				case 5:
 					game_end();
 					break;
 			}

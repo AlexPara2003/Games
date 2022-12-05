@@ -11,8 +11,10 @@ pos = 0;
 
 option[0, 0] = "Items";
 option[0, 1] = "Status";
-option[0, 2] = "Return";
-option[0, 3] = "Close Game";
+option[0, 2] = "Save";
+option[0, 3] = "Load";
+option[0, 4] = "Return";
+option[0, 5] = "Close Game";
 
 items = 0;
 for(var i = 0; i < array_length(obj_item_loader.inv); i++)

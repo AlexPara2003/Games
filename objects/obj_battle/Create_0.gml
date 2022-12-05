@@ -50,6 +50,13 @@ global.enemy_list =
 	}
 
 currentEnemy = global.enemy_list.skeleton;
+
+switch(global.battleEnemy)
+{
+	case ("Slime"): currentEnemy = global.enemy_list.slime; break;
+	case ("Skeleton"): currentEnemy = global.enemy_list.skeleton; break;
+}
+
 enemyTempDef = currentEnemy.enemyDef
 enemyCurrentHP = currentEnemy.enemyHP;
 enemyTempHP = enemyCurrentHP;
@@ -59,7 +66,12 @@ enemyChoice = "attack";
 playerTempHP = global.playerHP;
 playerDisHP = global.playerHP
 
+playerIdle = false;
+
 //battleSequence = "playerAttack";
 
 
 enemyAction = 0;
+
+dt = delta_time / 1000000;
+turnTimer = dt * 500;
