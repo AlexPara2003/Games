@@ -43,9 +43,27 @@ global.enemy_list =
 			Skeleton_1,
 			"This is testing text",
 			20,
+			15,
+			3,
+			"ranged"
+		),
+		spider : new create_enemy(
+			"Spider", 
+			Spider_1,
+			"This is testing text",
+			10,
+			10,
+			2,
+			"melee"
+		),
+		eye : new create_enemy(
+			"Eye", 
+			Eyeball_2,
+			"This is testing text",
+			15,
 			7,
 			2,
-			"ranged"
+			"melee"
 		)
 	}
 
@@ -55,6 +73,8 @@ switch(global.battleEnemy)
 {
 	case ("Slime"): currentEnemy = global.enemy_list.slime; break;
 	case ("Skeleton"): currentEnemy = global.enemy_list.skeleton; break;
+	case ("Spider"): currentEnemy = global.enemy_list.spider; break;
+	case ("Eye"): currentEnemy = global.enemy_list.eye; break;
 }
 
 enemyTempDef = currentEnemy.enemyDef
@@ -63,6 +83,7 @@ enemyTempHP = enemyCurrentHP;
 enemyDispHP = enemyCurrentHP;
 enemyChoice = "attack";
 
+playerTempDef = 0;
 playerTempHP = global.playerHP;
 playerDisHP = global.playerHP
 

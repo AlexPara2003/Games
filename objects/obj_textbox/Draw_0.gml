@@ -231,7 +231,7 @@ for (var c = 0; c < draw_char; c++)
 		shake_timer[c, page]--;
 		if (shake_timer[c, page] <= 2)
 		{
-			shake_timer[c, page] = irandom_range(4, 8);
+			shake_timer[c, page] = irandom_range(4, 6);
 			shake_dir[c, page] = irandom(360);
 			
 			_shake_x = lengthdir_x(1, shake_dir[c, page]);

@@ -24,13 +24,14 @@ switch(battleState)
 	}
 	case battleStates.player_turn:
 	{
+		playerTempDef = 0;
 		//show_debug_message(global.playerHP);
 		if (global.playerHP > 0)
 		{
 			if(!instance_exists(obj_battleMenu))
 			{
 				turnTimer = dt * 500;
-				show_debug_message("Player Turn");
+				//show_debug_message("Player Turn");
 				instance_create_layer(camera_get_view_x(view_camera[0]) + 1, camera_get_view_y(view_camera[0]) + 1, "Instances", obj_battleMenu);
 				//battleState = battleStates.player_action;
 			}
@@ -53,21 +54,24 @@ switch(battleState)
 		{
 			enemyTempDef = currentEnemy.enemyDef;
 			enemyAction = irandom(100);
-			show_debug_message(enemyAction);
+			//show_debug_message(enemyAction);
 			if (enemyAction >= 40) 
 			{
 				enemyChoice = "attack";
-				global.playerHP -= (currentEnemy.enemyAtk - global.playerDef);
+				var _damage =  currentEnemy.enemyAtk - (global.playerDef + playerTempDef);
+				if(_damage > 0) global.playerHP -= _damage;
+				else global.playerHP--;
+				//if (global.playerHP < 0) global.playerHP
 			}
 			else if (enemyAction >= 5 && enemyAction < 40) 
 			{
 				enemyChoice = "defend";
-				enemyTempDef *= 2;
+				enemyTempDef = currentEnemy.enemyDef * 2;
 			}
 			else enemyChoice = "flee";
 			
 			battleState = battleStates.enemy_action;
-			show_debug_message("Enemy Action");
+			//show_debug_message("Enemy Action");
 		}
 		else battleState = battleStates.battle_won;
 		//show_debug_message("Battle Won");
@@ -75,7 +79,7 @@ switch(battleState)
 	}
 	case battleStates.enemy_action:
 	{
-		if (enemyChoice != "nothing") show_debug_message(enemyChoice);
+		//if (enemyChoice != "nothing"); show_debug_message(enemyChoice);
 		switch (enemyChoice)
 		{
 			case "attack":
@@ -84,12 +88,18 @@ switch(battleState)
 				{
 					case "melee":
 					{
-						layer_sequence_create("Sequence", obj_player_battle.x, obj_player_battle.y, seq_enemy_generic);
+						if(!layer_sequence_exists("Sequence", seq_enemy_generic))
+						{
+							layer_sequence_create("Sequence", obj_player_battle.x, obj_player_battle.y, seq_enemy_generic);
+						}
 						break;
 					}
 					case "ranged":
 					{
-						layer_sequence_create("Sequence", obj_player_battle.x, obj_player_battle.y, seq_enemy_arrow);
+						if(!layer_sequence_exists("Sequence", seq_enemy_arrow))
+						{
+							layer_sequence_create("Sequence", obj_player_battle.x, obj_player_battle.y, seq_enemy_arrow);
+						}
 						break;
 					}
 				}
@@ -105,7 +115,14 @@ switch(battleState)
 			}
 			case "flee":
 			{
-				battleState = battleStates.round_over; // not implemented yet
+				var _enemyFlee = irandom(100);
+				if (_enemyFlee >= 50)
+				{
+					obj_player.visible = true;
+					room_goto(global.lastRoomVisited);
+					layer_sequence_create("Instances", obj_player_battle.x, obj_player_battle.y, seq_room_out);
+				}
+				battleState = battleStates.round_over;
 				enemyChoice = "nothing";
 				break;
 			}
@@ -122,13 +139,13 @@ switch(battleState)
 	case battleStates.battle_won:
 	{
 		if(!layer_sequence_exists("Sequence", seq_room_in)) layer_sequence_create("Sequence", obj_player_battle.x, obj_player_battle.y, seq_room_in);
-		show_debug_message("Battle Won");
+		//show_debug_message("Battle Won");
 		break;
 	}
 	case battleStates.battle_lost:
 	{
 		load_game(0);
-		show_debug_message("Battle Lost");
+		//show_debug_message("Battle Lost");
 		break;
 	}
 }

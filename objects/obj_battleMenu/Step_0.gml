@@ -44,10 +44,13 @@ if (select_key)
 					obj_battle.playerIdle = false;
 					instance_destroy();
 			        break;
-				//spells
+				//defend
 				case 1: 
 					//menu_level = 2;
-					
+					obj_battle.playerTempDef = global.playerDef * 2;
+					obj_battle.battleState++;
+					obj_battle.battleState++;
+					instance_destroy();
 					//not implimented yet
 					break;
 				//items

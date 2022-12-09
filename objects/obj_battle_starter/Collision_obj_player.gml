@@ -5,7 +5,7 @@ global.lastRoomVisited = room;
 
 if(obj_player.x_speed != 0 || obj_player.y_speed != 0)
 {
-	show_debug_message(spawnTimer);
+	//show_debug_message(spawnTimer);
 	spawnTimer -= dt;
 	if(spawnTimer <= 0) scr_battle_starter(enemy);
 }

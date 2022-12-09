@@ -74,6 +74,7 @@ function scr_game_text(_text_id)
 			case "mHealth - No":
 			{
 				scr_text("That's not good. Have a potion.")
+				item_add(global.item_list.lesser_health_potion);
 				break;
 			}
 		case "smith":
@@ -93,6 +94,7 @@ function scr_game_text(_text_id)
 				{
 					scr_text("Seeing as you're the first person to come here in a while I can't just 'ave you dying on me.");
 					scr_text("Here I'll let you have this sword.");
+					item_add(global.item_list.iron_sword);
 					break;
 				}
 		case "wall":
@@ -132,6 +134,37 @@ function scr_game_text(_text_id)
 		{
 			scr_text("-Under construction-");
 			break;
+		}
+		case "glitch":
+		{
+			scr_text("he is watching", "glitch");
+				//scr_text_shake()
+				//scr_text_color(0, 13, c_black, c_black, c_black, c_black);
+				scr_text_float(0, 13, 0.5, 0.5);
+				scr_text_shake(0, 13);
+			scr_text("he is watching", "glitch");
+				//scr_text_shake()
+				//scr_text_color(0, 13, c_black, c_black, c_black, c_black);
+				scr_text_float(0, 13, 0.5, 0.5);
+				scr_text_shake(0, 13);
+			scr_text("he is watching", "glitch");
+				//scr_text_shake()
+				scr_text_color(0, 13, c_black, c_black, c_black, c_black);
+				scr_text_float(0, 13, 0.5, 0.5);
+				scr_text_shake(0, 13);
+			scr_text("he is watching", "glitch");
+				//scr_text_shake()
+				scr_text_color(0, 13, c_red, c_red, c_red, c_red);
+				scr_text_float(0, 13, 0.5, 0.5);
+				scr_text_shake(0, 13);
+			break;
+		}
+		case "book":
+		{
+			scr_text("This is the book of Lore.");
+			scr_text("LLLOOORRREEEE!!!!");
+			scr_text_shake(0, 18);
+			scr_text_float(0, 18, 10, 2);
 		}
 		default:
 		{

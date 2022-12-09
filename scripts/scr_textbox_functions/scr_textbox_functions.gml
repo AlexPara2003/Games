@@ -91,11 +91,11 @@ function scr_text(_text)
 				snd[page_number] = snd_keyboard;
 				break;
 			}
-			case "angry":
+			case "glitch":
 			{
-				speaker_sprite[page_number] = spr_portrait_test_angry;
-				txtb_spr[page_number] = spr_textbox_default;
-				snd[page_number] = snd_keyboard;
+				speaker_sprite[page_number] = spr_empty;
+				txtb_spr[page_number] = spr_empty;
+				snd[page_number] = snd_silence;
 				//speaker_side[page_number] = -1;
 				break;
 			}

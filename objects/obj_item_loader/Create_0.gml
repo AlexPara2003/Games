@@ -46,7 +46,7 @@ global.item_list =
 		30,
 		function()
 		{
-			global.playerDef = global.playerBaseDef + 5;
+			global.playerDef = global.playerBaseDef + 2;
 		},
 		"armor"
 	),
@@ -68,7 +68,7 @@ global.item_list =
 	
 	nothing : new create_item(
 		"Nothing", 
-		"It's empty. Like my soul.", 
+		"It's empty... Like my soul.", 
 		spr_items,
 		0,
 		function()

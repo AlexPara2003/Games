@@ -10,7 +10,7 @@ op_space = 30;
 pos = 0;
 
 option[0, 0] = "Attack";
-option[0, 1] = "Spells";
+option[0, 1] = "Defend";
 option[0, 2] = "Items";
 option[0, 3] = "Flee";
 
